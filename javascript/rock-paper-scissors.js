@@ -1,14 +1,42 @@
-// create getComputerChoice function
-// request a random number return
-// make the random return between 0 and 2
-// si el numero es 0, dame piedra
-// si el numero es 1, dame tijera
-// si el numero es 2, dame papel
+function getComputerChoice() { 
+    let number = Math.floor(Math.random() * 3);
 
-function getComputerChoice(choice) { 
-    return Math.floor(Math.random() * 3);
+    if (number === 0) {
+        return "rock";
+    } else if (number === 1) {
+        return "scissor";
+    } else {
+        return "paper";
+    }
 }
 
-console.log (getComputerChoice());
+function getHumanChoice() {
+    let choice = prompt("Pls elije si piedra, papel o tijera");
+
+    if (choice = "rock") {
+        return "rock";
+    } else if (choice = "scissor") {
+        return "scissor";
+    } else if (choice = "paper") {
+        return "paper";
+    } else {
+        return "wrong input";
+    }
+}
+
+console.log(getHumanChoice());
+
+function playRound(humanChoice, computerChoice) {
+
+
+}
+
+const humanScore = 0;
+const computerScore = 0;
+
+
+
+
+
 
 
