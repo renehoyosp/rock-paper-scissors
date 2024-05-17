@@ -26,22 +26,12 @@ function getHumanChoice() {
     }
 }
 
-// recoger la decisión del humano y guardarla
-// recoger la decisión de la máquina y guardarla
-// evaluar condiciones
-// si el humano y la maquina elijen la misma vaina
-// entonces es empate
-
-// necesito que me muestre cuando gano y pierdo
-// si cojo piedra y la maquina tijera 
-// la parto e incremento mi score en 1
-// pero si la maquina coje papel
-// me parte y el pc aumenta su score en 1
-
-
 
 let humanScore = 0;
 let computerScore = 0;
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
 function playRound(humanChoice, computerChoice) {
     
@@ -68,12 +58,16 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+//un juego de 5 rondas donde el que tenga el puntaje mas alto gana
+//los jugadores deben jugar 5 rondas
+//almacenar conteo de scores    
+//una vez se acaben las 5 rondas
+//evaluar los puntos
+//si el humano tuvo mas puntos, gana el matcb
+//si la computadora tuvo mas, gana 
+///si ambos tuvieron el mismo puntaje, empate
 
-console.log(playRound(humanSelection, computerSelection));
 
-console.log(humanScore);  
 
 
 
