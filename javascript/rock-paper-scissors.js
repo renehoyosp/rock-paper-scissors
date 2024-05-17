@@ -48,16 +48,22 @@ function playRound(humanChoice, computerChoice) {
     if (humanChoice == computerChoice) {
         return "It's a thai";
     } else if (humanChoice == "rock" && computerChoice == "scissor") {
+        humanScore++;
         return "You win! Rock fucks Scissor";
     } else if (humanChoice == "rock" && computerChoice == "paper") {
+        computerScore++;
         return "You lose! Paper beats rock";
     } else if (humanChoice == "paper" && computerChoice == "rock") {
+        humanScore++;
         return "You win! Paper beats rock";
     } else if (humanChoice == "paper" && computerChoice == "scissor") {
+        computerScore ++;
         return "You lose! Scissor beats paper";
     } else if (humanChoice == "scissor" && computerChoice == "paper") {
+        humanScore++;
         return "You win! Scissor beats paper";
     } else if (humanChoice == "scissor" && computerChoice == "rock") {
+        computerScore++;
         return "You lose! Rock beats scissor";
     }
 }
