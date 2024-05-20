@@ -29,8 +29,6 @@ function getHumanChoice() {
     
 }
 
-let humanScore = 0;
-let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
 
@@ -57,9 +55,22 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+let humanScore = 0;
+let computerScore = 0;
 
+function gameResult(humanScore, computerScore) {
+
+    if (humanScore == computerScore) {
+        return "It's a tie, no winners";
+    } else if (humanScore > computerScore) {
+        return "HUMAN WINS!";
+    } else {
+        return "COMPUTER WINS!";
+    }
+}
 
 function playGame() {
+
     for (roundNumber = 0; roundNumber < 5; roundNumber++) {
         const computerSelection = getComputerChoice();
         const humanSelection = getHumanChoice();
@@ -69,9 +80,16 @@ function playGame() {
         console.log("Human score", humanScore);
         console.log("PC Score", computerScore);
     }
+
+    console.log(gameResult(humanScore, computerScore));     
+
+    return;
 }
 
+
+
 console.log(playGame());
+
 
          
 
