@@ -13,7 +13,8 @@ function getComputerChoice() {
 
  
 function getHumanChoice() {
-    let choice = prompt("Pls elije si piedra, papel o tijera");
+    let choice = "rock";
+    //prompt("Pls elije si piedra, papel o tijera");
 
     if (choice == "rock") {
         return "rock";
@@ -24,19 +25,17 @@ function getHumanChoice() {
     } else {
         return "wrong input";
     }
-}
 
+    
+}
 
 let humanScore = 0;
 let computerScore = 0;
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
 function playRound(humanChoice, computerChoice) {
-    
+
     if (humanChoice == computerChoice) {
-        return "It's a thai";
+        return "it's a tie";
     } else if (humanChoice == "rock" && computerChoice == "scissor") {
         humanScore++;
         return "You win! Rock fucks Scissor";
@@ -58,16 +57,39 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+
+
+function playGame() {
+    for (roundNumber = 0; roundNumber < 5; roundNumber++) {
+        const computerSelection = getComputerChoice();
+        const humanSelection = getHumanChoice();
+
+        console.log(roundNumber);
+        console.log(playRound(humanSelection, computerSelection));
+        console.log("Human score", humanScore);
+        console.log("PC Score", computerScore);
+    }
+}
+
+console.log(playGame());
+
+         
+
+
+
+
+
 //un juego de 5 rondas donde el que tenga el puntaje mas alto gana
 //los jugadores deben jugar 5 rondas
-//almacenar conteo de scores    
-//una vez se acaben las 5 rondas
-//evaluar los puntos
-//si el humano tuvo mas puntos, gana el matcb
-//si la computadora tuvo mas, gana 
-///si ambos tuvieron el mismo puntaje, empate
-
-
+//cada uno comienza con 0 puntos
+//por cada ronda 
+//hay una victoria, una derrota o un empate
+//segun el final de la ronda
+//el puntaje se le asigna al ganador o nadie tiene punto
+//se incrementa o no se incrementa
+//cuando las 5 rondas acabem
+//se evaluan los puntajes finales   
+//gana el que tenga el mayor puntaje entre los dos
 
 
 
