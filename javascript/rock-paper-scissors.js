@@ -13,8 +13,7 @@ function getComputerChoice() {
 
  
 function getHumanChoice() {
-    let choice = "rock";
-    //prompt("Pls elije si piedra, papel o tijera");
+    let choice = prompt("Pls choose: rock, paper or scissors").toLowerCase();
 
     if (choice == "rock") {
         return "rock";
@@ -71,21 +70,21 @@ function gameResult(humanScore, computerScore) {
 
 function playGame() {
 
-    for (roundNumber = 0; roundNumber < 5; roundNumber++) {
+    for (roundNumber = 1; roundNumber < 6; roundNumber++) {
         const computerSelection = getComputerChoice();
         const humanSelection = getHumanChoice();
 
-        console.log(roundNumber);
+        console.log("Round ", roundNumber);
         console.log(playRound(humanSelection, computerSelection));
         console.log("Human score", humanScore);
         console.log("PC Score", computerScore);
     }
 
+    console.log("----GAME WINNER----");
     console.log(gameResult(humanScore, computerScore));     
 
     return;
 }
-
 
 
 console.log(playGame());
