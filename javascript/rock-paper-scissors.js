@@ -90,25 +90,6 @@ function playGame() {
 console.log(playGame());
 
 
-         
-
-
-
-
-
-//un juego de 5 rondas donde el que tenga el puntaje mas alto gana
-//los jugadores deben jugar 5 rondas
-//cada uno comienza con 0 puntos
-//por cada ronda 
-//hay una victoria, una derrota o un empate
-//segun el final de la ronda
-//el puntaje se le asigna al ganador o nadie tiene punto
-//se incrementa o no se incrementa
-//cuando las 5 rondas acabem
-//se evaluan los puntajes finales   
-//gana el que tenga el mayor puntaje entre los dos
-
-
 
 
 
